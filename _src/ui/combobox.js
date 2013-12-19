@@ -74,6 +74,12 @@
 
                 me.initSelectItem();
 
+
+//                hover hide
+                me.root().delegate(null,'mouseleave',function(){
+                    me.hide();
+                });
+
                 this.initItemActive();
 
             },

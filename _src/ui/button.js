@@ -17,10 +17,17 @@ UM.ui.define('button', {
     init: function (options) {
         var me = this;
 
-        me.root($($.parseTmpl(me.tpl, options)))
-            .click(function (evt) {
+        if($(me.root($($.parseTmpl(me.tpl, options)))[0]).hasClass('edui-btn-')){
+            me.root($($.parseTmpl(me.tpl, options))).on("mouseenter",function (evt) {
+                $('.dropdown-menu').hide();
                 me.wrapclick(options.click, evt)
             });
+        }else{
+            me.root($($.parseTmpl(me.tpl, options))).on("click",function (evt) {
+                    me.wrapclick(options.click, evt)
+                });
+        }
+
 
         me.root().hover(function () {
             if(!me.root().hasClass("disabled")){
