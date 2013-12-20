@@ -3,6 +3,7 @@
     border: 1px solid #d4d4d4;
     box-shadow: 2px 2px 5px #d3d6da;
     background-color: #fff;
+    font-family:  "Microsoft Yahei",Helvetica Neue, Helvetica, Arial;
 }
 .edui-container .edui-toolbar{
     position: relative;
@@ -14,7 +15,9 @@
 }
 .edui-toolbar .edui-btn-toolbar{
     position: relative;
-    padding: 5px;
+    padding: 4px;
+    border-radius: 3px 3px 0 0;
+    background:#18B0B6; ;
 }
 .edui-container .edui-editor-body{
     background-color: #fff;
@@ -32,7 +35,7 @@
     display:block;
     word-wrap:break-word;
     font-size:16px;
-    font-family:sans-serif;
+    font-family:"Microsoft Yahei",Helvetica Neue, Helvetica, Arial;
 }
 .edui-editor-body.focus{border:1px solid #5c9dff}
 .edui-editor-body table{margin:10px 0 10px;border-collapse:collapse;display:table;}

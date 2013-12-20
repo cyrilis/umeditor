@@ -1,0 +1,141 @@
+/**
+ * Created by Cyril on 13-12-20.
+ */
+
+@font-face
+  font-family: 'turquoise'
+  src:url('fonts/turquoise.eot')
+  src:url('fonts/turquoise.eot?#iefix') format('embedded-opentype'),
+    url('fonts/turquoise.ttf') format('truetype'),
+    url('fonts/turquoise.woff') format('woff'),
+    url('fonts/turquoise.svg#turquoise') format('svg');
+  font-weight: normal
+  font-style: normal
+
+
+[class^="icon-"], [class*=" icon-"]
+  font-family: 'turquoise';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+
+body
+  margin 0
+  padding 0
+maincolor = #18B0B6;
+
+.edui-btn-toolbar
+  background maincolor
+  padding 4px
+  border-radius 3px 3px 0 0
+  &>.edui-btn
+  &>.edui-separator
+  &>.edui-splitbutton
+    display inline-block
+    width 36px
+    height 36px
+    overflow hidden
+    vertical-align top
+    color #fff
+    .edui-icon
+      display block
+      width 100%
+      height 100%
+      font-family: 'turquoise';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size 16px
+      text-align center
+      line-height 36px
+    .edui-icon-fullscreen:before
+      content "\e619"
+    .edui-icon-source:before
+      content "\e600"
+    .edui-icon-undo:before
+      content "\e601"
+    .edui-icon-redo:before
+      content "\e602"
+    .edui-icon-bold:before
+      content "\e603"
+    .edui-icon-italic:before
+      content "\e604"
+    .edui-icon-underline:before
+      content "\e605"
+    .edui-icon-strikethrough:before
+      content "\e606"
+    .edui-icon-superscript:before
+      content "\e634"
+    .edui-icon-subscript:before
+      content "\e637"
+    .edui-icon-forecolor:before
+      content "\e607"
+    .edui-icon-backcolor:before
+      content "\e607"
+      background #ffffff
+      color maincolor
+      padding 3px
+    .edui-icon-removeformat:before
+      content "\e638"
+    .edui-icon-insertorderedlist:before
+      content "\e60d"
+    .edui-icon-insertunorderedlist:before
+      content "\e60e"
+    .edui-icon-selectall:before
+      content "\e612"
+    .edui-icon-cleardoc:before
+      content "\e609"
+    .edui-icon-justifyleft:before
+      content "\e613"
+    .edui-icon-justifycenter:before
+      content "\e614"
+    .edui-icon-justifyright:before
+      content "\e615"
+    .edui-icon-link:before
+      content "\e625"
+    .edui-icon-unlink:before
+      content "\e623"
+    .edui-icon-emotion:before
+      content "\e626"
+    .edui-icon-image:before
+      content "\e610"
+  &>.edui-btn
+  &>.edui-splitbutton
+    &:hover .edui-icon
+      background maincolor - 5%
+
+  &>.edui-separator
+    width 10px
+  &>.edui-splitbutton
+    width 48px
+    &>.edui-btn
+      display inline-block
+      width 36px
+      height 36px
+      overflow hidden
+      vertical-align top
+      color #fff
+.edui-dialog-container
+  .dropdown-menu
+    display none
+    margin 0
+    padding 0
+    width: auto
+    position absolute
+    list-style none
+    li
+      display block
+      width auto
+      padding 3px
+      margin: 0
