@@ -122,7 +122,7 @@ maincolor = #18B0B6;
     .edui-icon-image:before
       content "\e610"
     .edui-icon-insertvideo:before
-      content "\e633"
+      content "\e628"
     .edui-icon-map:before
       content "\e62e"
     .edui-icon-horizontal:before
@@ -135,6 +135,7 @@ maincolor = #18B0B6;
   &>.edui-btn
   &>.edui-splitbutton
     &:hover .edui-icon
+    &.active .edui-icon
       background maincolor - 5%
   &>.edui-btn-fullscreen
     position absolute
@@ -237,6 +238,7 @@ maincolor = #18B0B6;
     color #fff
     padding-bottom 3px
     margin-top 10px
+    margin-left: 44px;
     li
       display block
       width auto
@@ -402,4 +404,32 @@ maincolor = #18B0B6;
   bottom: 0
   left: 0
   background-color: #a3a3a3
-
+#eduiVideoFloat .edui-video-float-left:before
+#eduiVideoFloat .edui-video-float-none:before
+#eduiVideoFloat .edui-video-float-right:before
+  display block!important
+  width 36px
+  font-family: 'turquoise';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size 32px
+  text-align center
+  line-height 36px
+  overflow hidden
+#eduiVideoFloat .edui-video-float-left:before
+  content "\e613"
+#eduiVideoFloat .edui-video-float-none:before
+  content "\e61d"
+#eduiVideoFloat .edui-video-float-right:before
+  content "\e615"
+.edui-image-searchBar .edui-image-searchAdd
+  background maincolor - 10%
+.edui-image-searchBar .edui-image-searchAdd.hover
+  background maincolor
+#eduiVideoPreview
+  background maincolor !important

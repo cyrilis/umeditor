@@ -8,7 +8,7 @@ UM.ui.define('menu',{
         }else{
             this.root().css($.extend({display:'block'},$obj ? {
                 top : $obj[fnname]().top + ( dir == 'right' ? 0 : $obj.outerHeight()) - (topOffset || 0),
-                left : $obj[fnname]().left + (dir == 'right' ?  $obj.outerWidth() : 0) -  (leftOffset || 0)
+                left : $obj[fnname]().left + (dir == 'right' ?  $obj.outerWidth() : 0) -  (leftOffset || 0) - (this.root().width()/2)
             }:{}))
             this.trigger('aftershow');
         }

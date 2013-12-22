@@ -200,8 +200,7 @@
                 for ( var j in nameMaps ) {
                     var div = document.createElement( "div" );
                     div.setAttribute( "name", j );
-                    if ( j == "none" ) div.className="edui-video-focus";
-                    div.style.cssText = "background:url("+ vidoe_home +"images/" + j + "_focus.jpg);";
+                    ( j == "none" )? div.className="edui-video-focus edui-video-float-"+j:div.className="edui-video-float-"+j;
                     div.setAttribute( "title", nameMaps[j] );
                     floatContainer.appendChild( div );
                 }
@@ -216,10 +215,10 @@
             for ( var i = 0, ci; ci = selects[i++]; ) {
                 domUtils.on( ci, "click", function () {
                     for ( var j = 0, cj; cj = selects[j++]; ) {
-                        cj.className = "";
-                        cj.removeAttribute && cj.removeAttribute( "class" );
+                        $(cj).removeClass("edui-video-focus")
                     }
-                    this.className = "edui-video-focus";
+                    //this.className = "edui-video-focus";
+                    $(this).addClass("edui-video-focus");
                 } )
             }
         },
@@ -254,7 +253,7 @@
             return false;
         },
         width:610,
-        height:498,
+        //height:"auto",
         buttons: {
             ok: {
                 exec: function( editor ){
