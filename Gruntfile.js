@@ -6,7 +6,7 @@ module.exports = function ( grunt ) {
         Util = {
 
             jsBasePath: '_src/',
-            cssBasePath: 'themes/default/_css/',
+            cssBasePath: 'themes/turquoise/stylesheets/',
 
             fetchScripts: function () {
 
@@ -29,19 +29,11 @@ module.exports = function ( grunt ) {
             },
 
             fetchStyles: function () {
+                var array = [];
+                var src = this.cssBasePath + "turquoise.css" ;
+                array.push(src);
 
-                var sources = fs.readFileSync( this.cssBasePath + "umeditor.css" ),
-                    filepath = null,
-                    pattern = /@import\s+([^;]+)*;/g,
-                    src = [];
-
-                while ( filepath = pattern.exec( sources ) ) {
-
-                    src.push( this.cssBasePath + filepath[ 1 ].replace( /'|"/g, "" ) );
-
-                }
-
-                return src;
+                return array;
 
             }
 
@@ -49,7 +41,7 @@ module.exports = function ( grunt ) {
         server = grunt.option('server') || 'php',
         encode = grunt.option('encode') || 'utf8',
         disDir = "dist/",
-        banner = '/*!\n * UEditor Mini版本\n * version: <%= pkg.version %>\n * build: <%= new Date() %>\n */\n\n';
+        banner = '/*!\n * UEditor Turquoise Mini版本\n * version: <%= pkg.version %>\n * build: <%= new Date() %>\n */\n\n';
 
     //init
     ( function () {
@@ -57,7 +49,7 @@ module.exports = function ( grunt ) {
         server = typeof server === "string" ? server.toLowerCase() : 'php';
         encode = typeof encode === "string" ? encode.toLowerCase() : 'utf8';
 
-        disDir = 'dist/' + encode + '-' + server + '/';
+        disDir = 'dist/' + server  + '-'+ encode + '/';
 
     } )();
 
@@ -74,7 +66,7 @@ module.exports = function ( grunt ) {
             },
             css: {
                 src: Util.fetchStyles(),
-                dest: disDir + 'themes/default/css/umeditor.css'
+                dest: disDir + 'themes/turquoise/stylesheets/turquoise.css'
             }
         },
         cssmin: {
@@ -83,9 +75,9 @@ module.exports = function ( grunt ) {
             },
             files: {
                 expand: true,
-                cwd: disDir + 'themes/default/css/',
+                cwd: disDir + 'themes/turquoise/stylesheets/',
                 src: ['*.css', '!*.min.css'],
-                dest: disDir + 'themes/default/css/',
+                dest: disDir + 'themes/turquoise/stylesheets/',
                 ext: '.min.css'
             }
         },
@@ -103,9 +95,17 @@ module.exports = function ( grunt ) {
                 files: [
                     {
 
-                        src: [ 'themes/default/images/**', 'dialogs/**', 'lang/**' ],
+                        src: [ 'themes/turquoise/stylesheets/fonts/**', 'dialogs/**', 'lang/**'],
                         dest: disDir
 
+                    }
+                ]
+            },
+            example:{
+                files:[
+                    {
+                        src: ['_examples/completeDemo_fork.html','_examples/jquery.js'],
+                        dest: disDir
                     }
                 ]
             },
@@ -150,7 +150,7 @@ module.exports = function ( grunt ) {
 
     grunt.registerTask('default', 'UEditor Mini build', function () {
 
-        var tasks = [ 'concat', 'cssmin', 'uglify', 'copy:base', 'copy:'+server, 'transcoding' ];
+        var tasks = [ 'concat', 'cssmin', 'uglify', 'copy:base', 'copy:example', 'copy:'+server, 'transcoding' ];
 
         //config修改
         updateConfigFile();
