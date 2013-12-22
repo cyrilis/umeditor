@@ -23,6 +23,14 @@ After Changed MainColor
 
 Online Site is comming soon! Be patient
 
+
+###Todo-List
+
+1. 修改图片缩放方式为缩放时保持图片比例不变
+2. grunt 命令修改 主色调，免去手动修改 stylus 文件后的编译
+3. 浏览器兼容性测试
+
+
 ###Licence###
 
-跟原 response 相同
+跟原 repo 相同
