@@ -30,6 +30,9 @@ body
   margin 0
   padding 0
 maincolor = #18B0B6;
+
+.edui-container
+  position relative
 .edui-toolbar
   position relative
   box-shadow: 0 4px 0 maincolor - 10%;
@@ -73,6 +76,7 @@ maincolor = #18B0B6;
       font-size 16px
       text-align center
       line-height 36px
+  &>.edui-btn
     .edui-icon-fullscreen:before
       content "\e619"
     .edui-icon-source:before
@@ -93,13 +97,6 @@ maincolor = #18B0B6;
       content "\e634"
     .edui-icon-subscript:before
       content "\e637"
-    .edui-icon-forecolor:before
-      content "\e607"
-    .edui-icon-backcolor:before
-      content "\e607"
-      background #ffffff
-      color maincolor
-      padding 3px
     .edui-icon-removeformat:before
       content "\e638"
     .edui-icon-insertorderedlist:before
@@ -134,6 +131,7 @@ maincolor = #18B0B6;
       content "\e630"
     .edui-icon-preview:before
       content "\e633"
+
   &>.edui-btn
   &>.edui-splitbutton
     &:hover .edui-icon
@@ -154,9 +152,9 @@ maincolor = #18B0B6;
       height: 36px;
       line-height: 36px;
   &>.edui-splitbutton
-    width 48px
+    width 36px
     &>.edui-btn
-      display inline-block
+      display none
       width 36px
       height 36px
       overflow hidden
@@ -164,6 +162,41 @@ maincolor = #18B0B6;
       color #fff
     &.disabled>.edui-btn
       color #ddd
+  .edui-btn.edui-dropdown-toggle
+    display block!important
+    width 100%
+    height 100%
+    font-family: 'turquoise';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size 16px
+    text-align center
+    line-height 36px
+    overflow hidden
+    &:before
+      width 36px
+      height 36px
+  &>.edui-splitbutton-forecolor
+    .edui-btn.edui-dropdown-toggle:before
+      content "\e607"
+      display inline-block
+    &.hover
+      .edui-btn.edui-dropdown-toggle:before
+        background maincolor - 5%
+  &>.edui-splitbutton-backcolor
+    .edui-btn.edui-dropdown-toggle:before
+      content "\e607"
+      background #ffffff
+      color maincolor
+      padding 3px
+    &.hover
+      .edui-btn.edui-dropdown-toggle:before
+        background #dddddd
 
   .edui-btn.hover .edui-button-label
     background maincolor - 5%
@@ -193,7 +226,7 @@ maincolor = #18B0B6;
     border-style: solid;
     border-width: 7px;
 .edui-dialog-container
-  .dropdown-menu
+  .dropdown-menu,.edui-dropdown-menu
     display none
     margin 0
     width: auto
@@ -212,6 +245,8 @@ maincolor = #18B0B6;
       min-width 90px
       background maincolor - 10%
       margin-bottom 2px
+      &.active
+        background maincolor
       &:hover
         background maincolor
       .edui-combobox-item-label
@@ -238,6 +273,114 @@ maincolor = #18B0B6;
       border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) maincolor - 20%;
       border-style: solid;
       border-width: 7px;
+    .edui-colorpicker
+      table
+        td a
+          width 16px
+          height 16px
+          display block
+  .edui-dropdown-menu
+    margin-left 22px
+    .edui-emotion-wrapper
+      ul
+        list-style none
+        margin 0
+        padding 0
+        li
+          display inline-block
+          min-width 75px
+          text-align center
+          a
+            color #ffffff
+            display: block
+            width: 100%
+            height: 100%
+            line-height: 28px
+            text-decoration: none
+          &.edui-emotion-tabs
+            display none
+    .edui-tab-pane
+      display none
+      &.active
+        display block
+    .edui-emotion-smileytable
+      td
+        color #ffffff
+
+  .edui-modal
+    position absolute
+    left 50%
+    background maincolor - 10%
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
+    color #ffffff
+    padding 10px
+    outline none
+    top 0
+    input[type="text"],input[type="email"],input[type="password"],input[type="number"]
+      border 2px solid #ffffff
+      -webkit-border-radius: 2px
+      -moz-border-radius: 2px
+      border-radius: 2px
+      padding 2px
+      outline none
+    .edui-modal-header
+      padding 10px
+      h3
+        margin 0
+    .edui-modal-body
+      .edui-tab-nav
+        margin: 0
+        padding 0
+        list-style none
+        .edui-tab-item
+          display inline-block
+          padding 6px 10px
+          background maincolor - 20%
+          a
+            color #ffffff
+            text-decoration none
+          &.active
+            background maincolor + 5%
+      .edui-tab-pane
+        display none
+        &.active
+          display block
+    .edui-modal-footer
+      padding 10px
+      .edui-btn
+        display inline-block
+        background maincolor
+        color #ffffff
+        -webkit-border-radius: 2px
+        -moz-border-radius: 2px
+        border-radius: 2px
+        padding 8px 10px
+        float right
+        margin-left 10px
+        cursor pointer
+        &.hover
+          background maincolor + 10%
+        &.edui-btn-primary
+          background #222222
+          &.hover
+            background #222222 + 20%
+    .edui-dialog-map-body
+      table
+        td
+          white-space nowrap
+          a.edui-map-button
+            display inline-block
+            background maincolor
+            color #ffffff
+            -webkit-border-radius: 2px
+            -moz-border-radius: 2px
+            border-radius: 2px
+            padding 3px 6px
+            cursor pointer
+            &:hover
+              background maincolor - 20%
 .edui-editor-body
   background #ffffff
   border 2px solid maincolor
@@ -250,4 +393,13 @@ maincolor = #18B0B6;
     padding 9px 9px 5px 5px
     p
       margin: 0 0 20px 0
+.edui-modal-backdrop
+  opacity: .5
+  filter: unquote('alpha(opacity=50)')
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: #a3a3a3
 

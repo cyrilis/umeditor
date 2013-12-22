@@ -21,7 +21,7 @@
 .edui-image-mask.active{display: block;}
 
 /*network*/
-.edui-image-searchBar{margin: 10px;}
+.edui-image-searchBar{margin: 0px;}
 .edui-image-searchBar .edui-image-searchTxt{display: inline-block !important;*display: inline !important;*zoom:1;width:400px; border: 1px solid #c5d2ff; height: 20px; line-height: 18px; font-size: 14px; padding: 3px; margin: 0;outline:0;}
 .edui-image-searchBar .edui-image-searchAdd{display: inline-block !important;*display: inline !important;*zoom:1;
     width:60px; text-align:center;height: 25px;text-align: center;line-height: 25px;
