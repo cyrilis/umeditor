@@ -109,6 +109,14 @@ module.exports = function ( grunt ) {
                     }
                 ]
             },
+            forEBlog:{
+                files:[
+                    {
+                        src: [disDir + "umeditor.min.js",disDir + "themes/turquoise/stylesheets/*"],
+                        dest:"../Eblog/public/"
+                    }
+                ]
+            },
             php: {
 
                 expand: true,
@@ -150,7 +158,7 @@ module.exports = function ( grunt ) {
 
     grunt.registerTask('default', 'UEditor Mini build', function () {
 
-        var tasks = [ 'concat', 'cssmin', 'uglify', 'copy:base', 'copy:example', 'copy:'+server, 'transcoding' ];
+        var tasks = [ 'concat', 'cssmin', 'uglify', 'copy:base', 'copy:example', 'copy:'+server, 'transcoding','copy:forEBlog'];
 
         //config修改
         updateConfigFile();

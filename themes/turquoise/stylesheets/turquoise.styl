@@ -33,14 +33,17 @@ maincolor = #18B0B6;
 /*maincolor = #585858*/
 .edui-container
   position relative
+  border 2px solid maincolor
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
 .edui-toolbar
   position relative
   box-shadow: 0 4px 0 maincolor - 10%;
 .edui-btn-toolbar
   background maincolor
-  padding 4px
+  padding 4px 2px
   padding-right 40px
-  border-radius 3px 3px 0 0
   &>.edui-btn
   &>.edui-separator
   &>.edui-splitbutton
@@ -213,13 +216,13 @@ maincolor = #18B0B6;
   padding: 3px 5px;
   display: none;
   border-radius: 2px;
-  margin-top: -72px;
+  margin-top: -81px;
   &:after
     display: block;
     position: absolute;
     content: '';
     left: 50%;
-    top: 26px;
+    top: 32px;
     width: 0;
     height: 0;
     margin-left: -7px;
@@ -385,14 +388,13 @@ maincolor = #18B0B6;
               background maincolor - 20%
 .edui-editor-body
   background #ffffff
-  border 2px solid maincolor
   border-radius: 0 0 3px 3px;
   textarea
     background transparent
   &>.edui-body-container
     margin: 0
     outline 0
-    padding 9px 9px 5px 5px
+    padding 9px 5px
     p
       margin: 0 0 20px 0
 .edui-modal-backdrop

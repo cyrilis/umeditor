@@ -27,6 +27,10 @@ body {
 /*maincolor = #585858*/
 .edui-container {
   position: relative;
+  border: 2px solid #18b0b6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 .edui-toolbar {
   position: relative;
@@ -34,9 +38,8 @@ body {
 }
 .edui-btn-toolbar {
   background: #18b0b6;
-  padding: 4px;
+  padding: 4px 2px;
   padding-right: 40px;
-  border-radius: 3px 3px 0 0;
 }
 .edui-btn-toolbar>.edui-btn,
 .edui-btn-toolbar>.edui-separator,
@@ -266,14 +269,14 @@ body {
   padding: 3px 5px;
   display: none;
   border-radius: 2px;
-  margin-top: -72px;
+  margin-top: -81px;
 }
 .edui-tooltip:after {
   display: block;
   position: absolute;
   content: '';
   left: 50%;
-  top: 26px;
+  top: 32px;
   width: 0;
   height: 0;
   margin-left: -7px;
@@ -476,7 +479,6 @@ body {
 }
 .edui-editor-body {
   background: #fff;
-  border: 2px solid #18b0b6;
   border-radius: 0 0 3px 3px;
 }
 .edui-editor-body textarea {
@@ -485,7 +487,7 @@ body {
 .edui-editor-body>.edui-body-container {
   margin: 0;
   outline: 0;
-  padding: 9px 9px 5px 5px;
+  padding: 9px 5px;
 }
 .edui-editor-body>.edui-body-container p {
   margin: 0 0 20px 0;
