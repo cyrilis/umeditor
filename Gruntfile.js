@@ -112,8 +112,16 @@ module.exports = function ( grunt ) {
             forEBlog:{
                 files:[
                     {
-                        src: [disDir + "umeditor.min.js",disDir + "themes/turquoise/stylesheets/*"],
-                        dest:"../Eblog/public/"
+                        expand: true,
+                        cwd: disDir,
+                        src: ["umeditor.min.js",'lang/**',"dialogs/**"],
+                        dest:"../test/public/javascripts"
+                    },
+                    {
+                        expand: true,
+                        cwd: disDir+"themes/turquoise/stylesheets/",
+                        src: ["**"],
+                        dest:"../test/public/stylesheets"
                     }
                 ]
             },
