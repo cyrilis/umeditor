@@ -73,7 +73,10 @@ UM.ui.define('scale', {
         var me = this,
             $root = me.root(),
             $target = me.data('$scaleTarget');
-        $target.css({width: $root.width(), height: $root.height()});
+        $target.css({
+            width: $root.width()
+            //,height: $root.height()
+        });
         me.attachTo($target);
     },
     updateContainerStyle: function (dir, offset) {
