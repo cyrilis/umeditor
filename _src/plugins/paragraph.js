@@ -13,7 +13,7 @@
  */
 UM.plugins['paragraph'] = function() {
     var me = this;
-    me.setOpt('paragraph',{'p':'', 'h1':'', 'h2':'', 'h3':'', 'h4':'', 'h5':'', 'h6':''});
+    me.setOpt('paragraph',{'p':'', 'h1':'', 'h2':'', 'h3':'', 'h4':'', 'h5':'', 'h6':'','blockquote':''});
     me.commands['paragraph'] = {
         execCommand : function( cmdName, style ) {
             return this.document.execCommand('formatBlock',false,'<' + style + '>');
