@@ -26,10 +26,14 @@ Online Site is comming soon! Be patient
 
 ###Todo-List
 
-1. 修改图片缩放方式为缩放时保持图片比例不变
-2. grunt 命令修改 主色调，免去手动修改 stylus 文件后的编译
-3. 浏览器兼容性测试
+- [x]  修改图片缩放方式为缩放时保持图片比例不变
+- [ ]  grunt 命令修改 主色调，免去手动修改 stylus 文件后的编译
+- [ ]  浏览器兼容性测试
 
+
+###Notice###
+
+不再主动添加新 feature, 只做 Bugfix. 接受pull-request.
 
 ###Licence###
 
