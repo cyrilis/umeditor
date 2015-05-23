@@ -1,6 +1,12 @@
 umeditor-turquoise
 =======
 
+### Demo
+**demo and instruction**
+
+[http://cyrilis.com/lab/turquoise/](http://cyrilis.com/lab/turquoise/)
+
+### Introduce
 Fork 自 百度编辑器Ueditor 的迷你版 campaign/umeditor , 做了些样式修改和一点js控制的修改：
 
 1. 修改下拉菜单由单击改为hover显示
@@ -19,12 +25,8 @@ After Changed MainColor
 
 ![](https://raw.github.com/cyrilis/umeditor-turquoise/Turquoise/umeditor-black.png)
 
-###Demo
-**demo and instruction**
 
-[http://cyrilis.com/lab/turquoise/](http://cyrilis.com/lab/turquoise/)
-
-###Todo-List
+### Todo-List
 
 - [x]  修改图片缩放方式为缩放时保持图片比例不变
 - [ ]  grunt 命令修改 主色调，免去手动修改 stylus 文件后的编译
