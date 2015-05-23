@@ -20,9 +20,9 @@ After Changed MainColor
 ![](https://raw.github.com/cyrilis/umeditor-turquoise/Turquoise/umeditor-black.png)
 
 ###Demo
+**demo and instruction**
 
-Online Site is comming soon! Be patient
-
+[http://cyrilis.com/lab/turquoise/](http://cyrilis.com/lab/turquoise/)
 
 ###Todo-List
 
